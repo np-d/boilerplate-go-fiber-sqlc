@@ -56,7 +56,7 @@ func main() {
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.JSON(map[string]string{
-			"message": "Welcome to PDV Controle Data Assistant Server!",
+			"message": "Welcome to your_project!",
 		})
 	})
 
