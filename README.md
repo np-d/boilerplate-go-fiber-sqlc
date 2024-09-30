@@ -36,17 +36,17 @@ set CGO_ENABLED=0 & set GOOS=windows& go build -o ./build/server.exe
 ```
 #### To Linux
 ```shell
-set CGO_ENABLED=0 & set GOOS=linux& go build -o ./build/server.exe
+set CGO_ENABLED=0 & set GOOS=linux& go build -o ./build/server
 ```
 #### To MacOS
 ```shell
-set CGO_ENABLED=0 & set GOOS=darwin& go build -o ./build/server.exe
+set CGO_ENABLED=0 & set GOOS=darwin& go build -o ./build/server
 ```
 
 ### From Linux
 #### To Windows
 ```shell
-CGO_ENABLED=0 GOOS=windows go build -o ./build/server
+CGO_ENABLED=0 GOOS=windows go build -o ./build/server.exe
 ```
 #### To Linux
 ```shell
