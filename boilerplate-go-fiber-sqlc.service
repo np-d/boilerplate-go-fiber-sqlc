@@ -1,0 +1,17 @@
+[Unit]
+Description=${PROJNAME}
+
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=admin
+WorkingDirectory=/home/admin
+ExecStart=/home/admin/server
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,21 @@
+version: "2"
+sql:
+  - schema: "sql/schema.sql"
+    engine: "postgresql"
+    queries:
+      - "sql/users.sql"
+    gen:
+      go:
+        package: "sqlc"
+        out: "app/database/postgres/sqlc"
+        sql_package: "pgx/v5"
+        overrides:
+          - go_type:
+              type: "int"
+            db_type: "pg_catalog.serial4"
+        emit_db_tags: true
+        emit_json_tags: true
+        json_tags_case_style: snake
+        json_tags_id_uppercase: false
+        emit_params_struct_pointers: true
+        emit_pointers_for_null_types: true
